@@ -174,7 +174,7 @@ document.querySelectorAll(".read-more").forEach(function(button) {
       localStorage.setItem("loginSuccess", "true");
 
       // Redirect to main page
-      window.location.href = "koti.html";
+      window.location.href = "index.html";
       return false; // Prevent default form submission
     }
      window.addEventListener("DOMContentLoaded", function () {
