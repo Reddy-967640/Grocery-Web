@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Fresh Market</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+        .register-form h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .register-form .box {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        .register-form .btn {
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .register-form .btn:hover {
+            background: darkgreen;
+        }
+        .register-form p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .register-form a {
+            color: green;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <form onsubmit="return redirectToHome()" class="register-form">
+        <h3>Register Now</h3>
+        <input type="text" placeholder="your name" class="box" required>
+        <input type="email" placeholder="your email" class="box" required>
+        <input type="password" placeholder="create password" class="box" required>
+        <input type="password" placeholder="confirm password" class="box" required>
+        <input type="submit" value="Register" class="btn">
+        <p>Already have an account? <a href="koti.html">Login here</a></p>
+    </form>
+
+    <script>
+        function redirectToHome() {
+            alert("Registered successfully!");
+            window.location.href = "index.html"; 
+            return false; 
+        }
+    </script>
+
+</body>
+</html>
