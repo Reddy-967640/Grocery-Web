@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Website</title>
+
+    <!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.0/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="koti.css">
+
+</head>
+<body>
+
+    <!-- header section starts -->
+
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i> groco </a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="#products">products</a>
+            <a href="#categories">categories</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+
+    <!-- Wrap cart icon with relative positioning -->
+            <div style="position: relative;">
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                <span id="cart-added-msg"
+                    style="
+                        position: absolute;
+                        top: -20px;
+                        right: -10px;
+                        background-color: #28a745;
+                        color: white;
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        display: none;
+                        z-index: 1000;">
+                    Product added!
+                </span>
+            </div>
+
+  
+            <div class="icon-btn fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form" id="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        
+
+
+        <div class="shopping-cart" id="shopping-cart">
+            <h3>Your Cart</h3>
+            <div id="cart-items"></div>
+             <div class="total">Total: $<span id="cart-total">0.00</span></div>
+            <a href="#" class="btn">Checkout</a>
+        </div>
+
+         <form class="login-form" onsubmit="return loginUser()">
+            <h3>Login Now</h3>
+            <input type="email" placeholder="Your Email" class="box" required>
+            <input type="password" placeholder="Your Password" class="box" required>
+            <p>Forget your password? <a href="#">Click here</a></p>
+            <p>Don't have an account? <a href="register.html">Create now</a></p>
+            <input type="submit" value="Login Now" class="btn">
+         </form>
+
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>fresh and <span>organic</span> products for you</h3>
+            <p>Nature's best — fresh fruits & organic products, packed with nutrients for a healthier you.</p>
+            <a href="#categories" class="btn">shop now</a>
+
+        </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- features section starts -->
+
+    <section class="features" id="features">
+        <h1 class="heading">our <span>features</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/feature-img-1.png" alt="">
+                <h3>fresh and organic</h3>
+                
+                <p class="more-detail" style="display: none;">We ensure the best organic produce directly from farms.</p>
+                <a href="#" class="btn read-more-btn">read more</a>
+            </div>
+            <div class="box">
+                <img src="image/feature-img-2.png" alt="">
+                <h3>free delivery</h3>
+                
+                <p class="more-detail" style="display: none;">Delivery is free on all orders above ₹499.</p>
+                <a href="#" class="btn read-more-btn">read more</a>
+            </div>
+            <div class="box">
+                <img src="image/feature-img-3.png" alt="">
+                <h3>easy payments</h3>
+                
+                 <p class="more-detail" style="display: none;">Pay easily with UPI, cards, or cash on delivery</p>
+                <a href="#" class="btn read-more-btn">read more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- features section ends -->
+    
+    <!-- products section starts -->
+    
+  
+    <section class="products" id="products">
+        <h1 class="heading"> our <span>products</span> </h1>
+        <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="image/product-1.png" alt="">
+                    <h3>fresh orange</h3>
+                    <div class="price">$4.99/- - 10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart"
+                        data-name="fresh Orange"
+                        data-price="3.99"
+                        data-img="image/product-1.png">
+                        add to cart
+                    </button>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="image/product-2.png" alt="">
+                    <h3>fresh onion</h3>
+                    <div class="price">$4.99/- - 10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart"
+                        data-name="fresh onion"
+                        data-price="3.99"
+                        data-img="image/product-2.png">
+                        add to cart
+                    </button>
+                    
+                </div>
+                <div class="swiper-slide box">
+                    <img src="image/product-3.png" alt="">
+                    <h3>fresh meat</h3>
+                    <div class="price">$4.99/- - 10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart"
+                        data-name="fresh meat"
+                        data-price="3.99"
+                        data-img="image/product-3.png">
+                        add to cart
+                    </button>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="image/product-4.png" alt="">
+                    <h3>fresh cabbage</h3>
+                    <div class="price">$4.99/- - 10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart"
+                        data-name="fresh cabbage"
+                        data-price="3.99"
+                        data-img="image/product-4.png">
+                        add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="image/product-5.png" alt="">
+                    <h3>fresh potato</h3>
+                    <div class="price">$4.99/- - 10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart"
+                        data-name="fresh potato"
+                        data-price="25"
+                        data-img="image/product-5.png">
+                        add to cart
+                    </button>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="image/product-6.png" alt="">
+                    <h3>fresh avocado</h3>
+                    <div class="price">$4.99/- - 10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart"
+                        data-name="fresh avocado"
+                        data-price="45"
+                        data-img="image/product-6.png">
+                        add to cart
+                    </button>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="image/product-7.png" alt="">
+                    <h3>fresh carrot</h3>
+                    <div class="price">$4.99/- - 10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart"
+                        data-name="fresh carrot"
+                        data-price="30"
+                        data-img="image/product-7.png">
+                        add to cart
+                    </button>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="image/product-8.png" alt="">
+                    <h3>green lemon</h3>
+                    <div class="price">$4.99/- - 10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart"
+                        data-name="green lemon"
+                        data-price="10"
+                        data-img="image/product-8.png">
+                        add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- products section ends -->
+
+    <!-- categories section starts -->
+
+    <section class="categories" id="categories">
+        <h1 class="heading">product <span>categories</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/cat-1.png" alt="">
+                <h3>vegetables</h3>
+                <p>upto 45% off</p>
+                <a href="https://www.bigbasket.com/pc/fruits-vegetables/fresh-vegetables/" target="_blank" class="btn">shop now</a>
+            </div>
+            <div class="box">
+                <img src="image/cat-2.png" alt="">
+                <h3>fresh fruits</h3>
+                <p>upto 45% off</p>
+                <a href="https://pluckk.in/" target="_blank" class="btn">shop now</a>
+            </div>
+            <div class="box">
+                <img src="image/cat-3.png" alt="">
+                <h3>dairy products</h3>
+                <p>upto 45% off</p>
+                <a href="https://visit.amul.in/#/home" target="_blank" class="btn">shop now</a>
+            </div>
+            <div class="box">
+                <h3>fresh meat</h3>
+                <p>upto 45% off</p>
+                 <img src="image/cat-4.png" alt="">
+                <a href="https://www.licious.in/" target="_blank" class="btn">shop now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- categories section ends -->
+
+    <!-- review section starts -->
+
+    <section class="review" id="review">
+        <h1 class="heading">customer's <span>review</span></h1>
+        <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="image/pic-4.jpeg" alt="">
+                    <p>Madhav Reddy is a CSE student at Vignan University, passionate about coding and tech. He is eager to learn and apply innovative solutions.</p>
+                    <h3>Madhav Reddy</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="image/pic-1.jpeg" alt="">
+                    <p>Daggula Koti Reddy is a CSE student at Vignan University, passionate about coding and tech. He is eager to learn and apply innovative solutions..</p>
+                    <h3>Daggula Koti Reddy</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="image/pic-3.jpeg" alt="">
+                    <p>Chinnapa Reddy is a CSE student at Vignan University, passionate about coding and tech. He is eager to learn and apply innovative solutions..</p>
+                    <h3>chinnapa Reddy</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="image/pic-4.jpeg" alt="">
+                    <p>Venakata Rao is a CSE student at Vignan University, passionate about coding and tech. He is eager to learn and apply innovative solutions..</p>
+                    <h3>venata rao</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- blogs section starts -->
+
+    <section class="blogs" id="blogs">
+        <h1 class="heading">our <span>blogs</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/blog-1.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i> by user </a>
+                        <a href="#"><i class="fas fa-calendar"></i> 1st May, 2022 </a>
+                    </div>
+                    <h3>fresh and organic vegetables </h3>
+                    <p>Eat your greens, grow your dreams
+                         <span class="extra-text" style="display: none;"> Vegetables are rich in vitamins, minerals, and fiber, making them essential for a healthy diet.</span>
+                    </p>
+                    <button class="btn read-more">read more</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/fruits.jpeg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i> by user </a>
+                        <a href="#"><i class="fas fa-calendar"></i> 1st June, 2022 </a>
+                    </div>
+                    <h3>fresh and organic fruits </h3>
+                    <p>Juicy, fresh, and full of life
+                        <span class="extra-text" style="display: none;"> Fruits boost immunity and energy levels naturally, keeping you fresh every day.</span>
+                    </p>
+                    <button class="btn read-more">read more</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/meat.jpeg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i> by user </a>
+                        <a href="#"><i class="fas fa-calendar"></i> 1st July, 2022 </a>
+                    </div>
+                    <h3>fresh and meat</h3>
+                    <p>From farm to flame — pure protein power.</p>
+                    <p>
+                       <span class="extra-text" style="display: none;"> High-quality meat provides essential protein and nutrients for strength and growth.</span>
+                    
+                    </p>
+                        
+                    <button class="btn read-more">read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blogs section ends -->
+
+    <!-- footer section starts -->
+
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>groco <i class="fas fa-shopping-basket"></i></h3>
+                <p>Daggula Koti Reddy is a CSE student at Vignan University, passionate about coding and tech.</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>content info</h3>
+                <a href="#" class="links"><i class="fas fa-phone"></i> +92-321-4655990 </a>
+                <a href="#" class="links contact-through-email"><i class="fas fa-envelope"></i> d.kotireddy4016@gmail.com </a>
+                <a href="#" class="links"><i class="fas fa-map-marker-alt"></i> Andhara Pradesh, India - 54840 </a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home" class="links"><i class="fas fa-arrow-right"></i> home </a>
+                <a href="#features" class="links"><i class="fas fa-arrow-right"></i> features </a>
+                <a href="#products" class="links"><i class="fas fa-arrow-right"></i> products </a>
+                <a href="#categories" class="links"><i class="fas fa-arrow-right"></i> categories </a>
+                <a href="#review" class="links"><i class="fas fa-arrow-right"></i> review </a>
+                <a href="#blogs" class="links"><i class="fas fa-arrow-right"></i> blogs </a>
+            </div>
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="subscribe" class="btn">
+                <img src="image/payment.png" class="payment-img" alt="">
+            </div>
+        </div>
+        <div class="credit">
+            created by <span>Daggula Koti Reddy</span> | all rights reserved
+        </div>
+    </section>
+  
+    
+
+    <!-- footer section ends -->
+
+    <!-- custom javascript section starts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.0/swiper-bundle.min.js"></script>
+    <script src="koti.js"></script> 
+
+    <!-- custom javascript section ends -->
+
+</body>
+</html>
