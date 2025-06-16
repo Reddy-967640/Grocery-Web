@@ -196,3 +196,17 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
         }, 500);
     });
 });
+
+function showCartAddedMessage() {
+  const msg = document.getElementById('cart-added-msg');
+  msg.style.display = 'block';
+  msg.classList.add('bounce');
+
+  setTimeout(() => {
+    msg.style.display = 'none';
+    msg.classList.remove('bounce');
+  }, 1500);
+}
+
+
+
